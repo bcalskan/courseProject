@@ -5,7 +5,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
 
-public class Lambda2 {
+public class Lambda2_Integer {
     public static void main(String[] args) {
         List<Integer> sayi = new ArrayList<>(Arrays.asList(4, 2, 6, 11, -5, 7, 3, 15));
         ciftKareYazdir(sayi);
@@ -29,17 +29,17 @@ public class Lambda2 {
 
     // Task : Functional Programming ile listin cift elemanlarinin  karelerini ayni satirda aralarina bosluk bırakarak print ediniz
     public static void ciftKareYazdir(List<Integer> sayi) {
-        sayi.stream().filter(Lambda1::ciftMi).map(t -> t * t).forEach(Lambda1::print);
+        sayi.stream().filter(Lambda1_Integer::ciftMi).map(t -> t * t).forEach(Lambda1_Integer::print);
     }
 
     // Task : Functional Programming ile listin tek elemanlarinin  kuplerinin bir fazlasini ayni satirda aralarina bosluk birakarak print edin
     public static void tekKüpYazdir(List<Integer> sayi) {
-        sayi.stream().filter(t -> t % 2 != 0).map(t -> (t * t * t) + 1).forEach(Lambda1::print);
+        sayi.stream().filter(t -> t % 2 != 0).map(t -> (t * t * t) + 1).forEach(Lambda1_Integer::print);
     }
 
     // Task : Functional Programming ile listin cift elemanlarinin karekoklerini ayni satirda aralarina bosluk birakarak yazdiriniz
     public static void ciftKarekökYazdir(List<Integer> sayi) {
-        sayi.stream().filter(Lambda1::ciftMi).map(Math::sqrt).forEach(t -> System.out.print(t + " "));
+        sayi.stream().filter(Lambda1_Integer::ciftMi).map(Math::sqrt).forEach(t -> System.out.print(t + " "));
     }
 
     // Task : list'in en buyuk elemanini yazdiriniz
@@ -52,7 +52,7 @@ public class Lambda2 {
 
     // Task : List'in cift elemanlarin karelerinin en buyugunu print ediniz
     public static void ciftKareEnBüyük(List<Integer> sayi) {
-        System.out.println(sayi.stream().filter(Lambda1::ciftMi).map(t -> t * t).reduce(Math::max));
+        System.out.println(sayi.stream().filter(Lambda1_Integer::ciftMi).map(t -> t * t).reduce(Math::max));
     }
 
     // Task : List'teki tum elemanlarin toplamini yazdiriniz. --->Lambda expression
@@ -65,6 +65,6 @@ public class Lambda2 {
 
     // Task : List'teki cift elemanlarin carpimini  yazdiriniz.
     public static void ciftElemenlarCarpimi(List<Integer> sayi) {
-        System.out.println(sayi.stream().filter(Lambda1::ciftMi).reduce(1, (a, b) -> (a * b)));
+        System.out.println(sayi.stream().filter(Lambda1_Integer::ciftMi).reduce(1, (a, b) -> (a * b)));
     }
 }

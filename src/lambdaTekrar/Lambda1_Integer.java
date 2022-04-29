@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class Lambda1 {
+public class Lambda1_Integer {
     public static void main(String[] args) {
         List<Integer> sayi = new ArrayList<>(Arrays.asList(4, 2, 6, 11, -5, 7, 3, 15));
         boslukluPrint(sayi); //4 2 6 11 -5 7 3 15
@@ -37,7 +37,7 @@ public class Lambda1 {
 
     //Task : Functional Programming kullanarak list elemanlarini aralarinda bosluk olacak sekilde print ediniz.
     public static void boslukluPrint2(List<Integer> sayi) {
-        sayi.stream().forEach(Lambda1::print);
+        sayi.stream().forEach(Lambda1_Integer::print);
     }
 
     //ciftBul
@@ -47,16 +47,16 @@ public class Lambda1 {
 
     //Functional Programming ile list elemanlarinin  cift olanalrini ayni satirda aralarina bosluk birakarak print ediniz
     public static void ciftBoslukluYazdir(List<Integer> sayi) {
-        sayi.stream().filter(t -> t % 2 == 0).forEach(Lambda1::print);
+        sayi.stream().filter(t -> t % 2 == 0).forEach(Lambda1_Integer::print);
     }
 
     public static void ciftBoslukluYazdir1(List<Integer> sayi) {
-        sayi.stream().filter(Lambda1::ciftMi).forEach(Lambda1::print);
+        sayi.stream().filter(Lambda1_Integer::ciftMi).forEach(Lambda1_Integer::print);
     }
 
     //Task: functional prog ile list elemanlarinin 34den kücük cift olanlarini ayni satirda aralarina bosluk birakarak print
     public static void otuzdörttenKücükCift(List<Integer> sayi) {
-        sayi.stream().filter(t -> t < 34).filter(Lambda1::ciftMi).forEach(Lambda1::print);
+        sayi.stream().filter(t -> t < 34).filter(Lambda1_Integer::ciftMi).forEach(Lambda1_Integer::print);
     }
 
 }
