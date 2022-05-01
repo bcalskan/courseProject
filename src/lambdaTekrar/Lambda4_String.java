@@ -55,16 +55,22 @@ public class Lambda4_String {
 
     // Task : List elelmmalarinin karakter sayisini 7 ve 7 'den az olma durumunu kontrol ediniz.
     public static void karakterSayisiKontrol(List<String> menü) {
+        System.out.println(menü.stream().allMatch(t -> t.length() <= 7));
 
     }
 
     // Task : List elelmanlarinin "W" ile baslamasını kontrol ediniz.
-    public static void wIleBaslama(List<String> menü){
+    public static void wIleBaslama(List<String> menü) {
+        System.out.println(menü.stream().noneMatch(t -> t.startsWith("w")) ? "var" : "yok");
     }
 
     // Task : Karakter sayisi en buyuk elemani yazdiriniz.
-    public static void karakterSayisiMax(List<String> menü){
+    public static void karakterSayisiMax(List<String> menü) {
+        menü.stream().sorted(Comparator.comparing(t -> t.toString().length()).reversed()).findFirst();
     }
+
+    // Task : list elemanlarini son harfine göre siralayıp ilk eleman hariç kalan elemanlari print ediniz.
+
 
 
 }
