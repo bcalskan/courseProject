@@ -5,7 +5,7 @@ import java.util.Map;
 import java.util.Scanner;
 import java.util.Set;
 
-public class Ögrenci {
+public class  Ögrenci {
     static Map<String, String> ögrencilerMap = new HashMap<>();
     static Scanner scan = new Scanner(System.in);
 
@@ -56,7 +56,7 @@ public class Ögrenci {
                 case "A":
                     Depo.anaMenü();
                     break;
-                case "mayinTarlasi":
+                case "Q":
                 case "q":
                     break;
                 default:
@@ -64,7 +64,7 @@ public class Ögrenci {
 
             }
 
-        } while (!ögrenciSecim.equalsIgnoreCase("mayinTarlasi"));
+        } while (!ögrenciSecim.equalsIgnoreCase("Q"));
 
         Depo.cikisYap();
 
