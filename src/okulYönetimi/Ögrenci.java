@@ -77,6 +77,7 @@ public class  Ögrenci {
 
         String silinecekValue = ögrencilerMap.get(kayitSilÖgrenci);
         String sonucValue = ögrencilerMap.remove(kayitSilÖgrenci);
+
         while (true) {
             try {
                 boolean sonuc = silinecekValue.equalsIgnoreCase(sonucValue);
