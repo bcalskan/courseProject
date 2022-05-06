@@ -5,7 +5,6 @@ import java.util.*;
 public class _Hasta {
     static Map<String, String> hastalar = new HashMap<>();
     static Set<Map.Entry<String, String>> setHastalar = hastalar.entrySet();
-
     static Scanner scan = new Scanner(System.in);
     static boolean AcilMi = true;
 
@@ -40,7 +39,6 @@ public class _Hasta {
             }
         } while (flag);
 
-
         System.out.println("Bulmak istediginiz hastanin hastaligi : ");
         String hastalikBul = scan.nextLine();
         System.out.println("\t === HASTALAR ===\n" +
@@ -58,8 +56,6 @@ public class _Hasta {
                 System.out.println("Girdiginiz ID´ye sahip hasta bulunamadi.");
                 break;
             }
-
-
         }
 
     }
