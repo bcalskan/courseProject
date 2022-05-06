@@ -43,7 +43,6 @@ public class _Hasta {
 
         System.out.println("Bulmak istediginiz hastanin hastaligi : ");
         String hastalikBul = scan.nextLine();
-
         System.out.println("\t === HASTALAR ===\n" +
                 "ID    ISIM      SOYISIM   HASTALIK");
 
@@ -82,8 +81,6 @@ public class _Hasta {
                 System.out.printf("%-3s   %-7s    %-8s  %-15s", eachKey, eachValueArr[0], eachValueArr[1], eachValueArr[2]);
             }
         }
-
-
     }
 
     public static void hastaListele() {
@@ -108,7 +105,6 @@ public class _Hasta {
         String yeniSoyisim = scan.nextLine();
         System.out.println("HASTALIK : ");
         String yeniHastalik = scan.nextLine();
-
         String eklenecekHasta = yeniIsim + ", " + yeniSoyisim + ", " + yeniHastalik;
         hastalar.put(yeniID, eklenecekHasta);
     }
@@ -116,12 +112,9 @@ public class _Hasta {
     public static void hastaSil() {
         System.out.print("Silmek istediginiz hastanin ID numarasi : ");
         String silID = scan.nextLine();
-
         String silinecekValue = hastalar.get(silID);
         String sonucValue = hastalar.remove(silID);
-
         boolean kontrol = silinecekValue.equalsIgnoreCase(sonucValue);
-
         if (kontrol) {
             System.out.println("Kayit silindi.");
         } else System.out.println("Bulunamadi.");
@@ -132,7 +125,6 @@ public class _Hasta {
         StringBuilder str = new StringBuilder();
         List<String> acilHastaliklarListesi = new ArrayList<>(Arrays.asList("Kalp Hastaliklari", "Diabet", "Migren", "Böbrek Yetmezligi"));
         Set<Map.Entry<String, String>> setHastalar = hastalar.entrySet();
-
 
         for (Map.Entry<String, String> each : setHastalar) {
             String eachKey = each.getKey();

@@ -9,9 +9,7 @@ import static hastane._Hasta.acilHastaliklar;
 
 public class _Hastane {
     static Scanner scan = new Scanner(System.in);
-
     public static void anaMenü() {
-
 
         String secim = "";
         do {
@@ -60,10 +58,7 @@ public class _Hastane {
                 case "Q":
                     cikisYap1();
                     break;
-
-
             }
-
         } while (!secim.equalsIgnoreCase("Q"));
 
 

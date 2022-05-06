@@ -31,9 +31,7 @@ public class _Doktor {
                 for (Map.Entry<String, String> each : setDoktorlar) {
                     String eachKey = each.getKey();
                     String eachValue = each.getValue();
-
                     String[] eachValurArr = eachValue.split(", ");
-
                     if (each.getKey().equals("Allergist")) {
                         System.out.println("\n\t === ILGILI DOKTOR ===\n" +
                                 "UNVAN              ISIM      SOYISIM");
@@ -47,9 +45,7 @@ public class _Doktor {
                 for (Map.Entry<String, String> each : setDoktorlar) {
                     String eachKey = each.getKey();
                     String eachValue = each.getValue();
-
                     String[] eachValurArr = eachValue.split(", ");
-
                     if (hastalikBul.equalsIgnoreCase("Bas agrisi") && each.getKey().equals("Norolog")) {
                         System.out.println("\n\t === DOKTORLAR ===\n" +
                                 "UNVAN              ISIM      SOYISIM");
@@ -111,9 +107,6 @@ public class _Doktor {
             default:
                 System.out.println("Girdiginiz hastaliga sahip bir hasta bulunamadi");
                 doktorBul(hastalikBul);
-
-
-
         }
     }
 
@@ -141,7 +134,6 @@ public class _Doktor {
             String eachKey = each.getKey();
             String eachValue = each.getValue();
             String [] eachValueArr = eachValue.split(", ");
-
             if (arananUnvan.equalsIgnoreCase(each.getKey())){
                 System.out.printf("%-14s %-7s    %-8s\n", eachKey, eachValueArr[0], eachValueArr[1]);
             }
